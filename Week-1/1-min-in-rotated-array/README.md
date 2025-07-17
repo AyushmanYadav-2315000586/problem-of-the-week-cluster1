@@ -1,8 +1,9 @@
-# Problem: <Min in Sorted Rotated Array>
+# 🧩 Problem: Min in Sorted Rotated Array
 
-📄 Description: Imagine you're working on an update system for a fleet of autonomous vehicles at Uber. The system stores updates in a sorted array for efficiency, but due to reboots, the array sometimes gets rotated. You must find the **minimum element**.
+📄 **Description:**  
+Imagine you're working on an update system for a fleet of autonomous vehicles at Uber. The system stores updates in a sorted array for efficiency, but due to reboots, the array sometimes gets rotated. You must find the **minimum element**.
 
-🧠 Category: **Binary Search**
+🧠 **Category:** Binary Search (Variant)
 
 ---
 
@@ -10,32 +11,35 @@
 
 ### 1. Brute Force
 
-- Logic: [Describe idea simply]
-- Time: O(...)
-- Space: O(...)
+- **Logic:**  
+  Traverse the entire array and keep track of the smallest element seen so far.
 
-### 2. Optimized Approach
+- **Time Complexity:** O(n)  
+- **Space Complexity:** O(1)
 
-- Logic: [Key trick / data structure used]
-- Time: O(...)
-- Space: O(...)
+### 2. Optimized Binary Search
+
+- **Logic:**  
+  Use a modified binary search.  
+  - If the left part (from `low` to `mid`) is sorted, then the minimum might be in that part → update `ans` with `arr[low]`, and shift `low = mid + 1`.  
+  - Else, the minimum is in the right part → update `ans` with `arr[mid]`, and shift `high = mid - 1`.
+
+- **Time Complexity:** O(log n)  
+- **Space Complexity:** O(1)
 
 ---
 
 ## 📌 Sample I/O
 
-**Input:**  
-...
+**Input:**
+arr = [4, 5, 6, 7, 1, 2]
 
-**Output:**  
-...
+**Output:**
+1
+
+
 
 **Explanation:**  
-...
+The original sorted array might have been `[1, 2, 4, 5, 6, 7]`, but it got rotated. The minimum element is `1`.
 
 ---
-
-## 📎 References
-
-- [LeetCode Link](...)
-- [YouTube Explanation (if used)](...)
