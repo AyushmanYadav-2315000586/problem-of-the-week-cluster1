@@ -62,11 +62,11 @@ Implemented in: `optimal.java`
 
 ## 📌 Sample I/O
 
-**Input:**
-
 ```java
+**Input:**
 nums = [1, 2, 3, -3, 1, 1], k = 3
-Output: 5
+**Output:**
+5
 
 Explanation:
 The 5 subarrays whose sum is 3 are: [1, 2] , [3] , [3, -3, 1, 1, 1] , [1, 1, 1] , [2, 3, -3, 1]
